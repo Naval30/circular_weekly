@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+        {% block title %}We found this deals for {{store_name}} at {{ location }}{% endblock %}
+        {% block bootstrap %}
+        <link href="{{ BASE_DIR }}/static/css/deals.css" rel="stylesheet">
+        {% endblock %}
+
+{% block content %}
+  <div class="container">
+      
+      <!-- Three columns of text below the carousel -->
+    {% for product in products %}
+    <div class="row">
+      {% for p in product %}
+        <div class="col-lg-4">
+            <h4>{{ p.product_name }}</h4>
+            <div class="thumbnail">
+                <img class="img-responsive" src="{{ p.product_picture }}" alt="140x140" style="wiedth: 240px; height: 240px;">
+            </div>
+            <p>Find in in store for only:<strong>
+            {% if '$' not in p.discount_price and '¢' not in p.discount_price %}
+                $
+            {% endif %}
+            {{ p.discount_price }}</strong></p>
+            <p>Deal expier on: <span style="color: red">{{ p.end_date }}</span></p>
+            <!--
+            <p><a class="btn btn-default" href="#" role="button">View all Store Locations &raquo;</a></p>
+            -->
+        </div><!-- /.col-lg-4 -->
+      {% endfor %}
+    </div><!-- /.row -->
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Weekly Circular - Home page{% endblock %}
+{% block bootstrap %}
+  <link href="{{ BASE_DIR }}/static/css/carousel.css" rel="stylesheet">
+{% endblock %}
+
+{% block content-carousel %}
+{% include "home_carousel.html" %}
+{% endblock %}
+
+{% block content %}
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img data-lazyload="true"
+           src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTju6g6xnlEEgLPAagt25Z--dPhYKoeOdIUviouknflUNOaYFoVSg"
+           title="Deals" alt="Deals of the day" border="0"
+           style="
+           height:140px ; width:140px;">
+          <h2>Deals</h2>
+          <p>Need a better substitute for couponing! Try our daily deals</p>
+          <p><a class="btn btn-default" href="{% url 'deals' %}" role="button">View deals</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img data-lazyload="true"
+           src="http://www.bostonhomestayblog.com/grocery-shopping.jpg"
+           title="Grocerstore" alt="Grocery store" border="0"
+           style="
+           height:140px ; width:140px;">
+          <h2>Grocery Stores</h2>
+          <p>Tired of visiting all grocery stores to get best deals around the town! Our website is one final stop for you.</p>
+          <p><a class="btn btn-default" href="{% url 'deals' %}" role="button">View stores</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img data-lazyload="true"
+           src="http://4.bp.blogspot.com/-v5T6cU9K6A4/UQAEXQxD72I/AAAAAAAAAGw/w8J8iyhMQWQ/s1600/GetCooking.png"
+           title="Chefhat" alt="recipes" border="0"
+           style="
+           height:140px ; width:140px;">
+          <h2>Recipes</h2>
+          <p>Confused on what to cook with your ingridients! Try our recipe search where you can cook best dishes for least prices</p>
+          <p><a class="btn btn-default" href="{% url 'recipe' %}" role="button">View recipes</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+  <!--    <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="http://www.ehdwallpaper.com/wp-content/uploads/2013/05/delicious-dessert-hd-widescreen-wallpapers.jpgc" alt="Generic placeholder image" height= "500" width="500" >
+        </div>
+      </div>
+           http://www.ehdwallpaper.com/wp-content/uploads/2013/05/delicious-dessert-hd-widescreen-wallpapers.jpg
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+<hr class="featurette-divider"> -->
+
+<!-- /END THE FEATURETTES -->
+{% endblock %}

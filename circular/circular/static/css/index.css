@@ -1,0 +1,25 @@
+.pic{
+    align:center;
+    postion:absolute;
+    top:500px;
+    width: 1020px;
+    height:200px;
+    background-image: url("http://612.mn/wp-content/uploads/2013/11/612.mn-icons-home-cyan-dd.png");
+    margin-right: 130px;
+    margin-left: 130px;
+    /*
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ6LhBll3GV9L3EdEnNgJJJyOnXmCzF7sex1IMcbSKatnsly0a");
+    */
+}
+
+.bottom{
+    
+    content:url("http://whosgotcoupons.com/wp-content/uploads/2013/05/WeeklyDeals-300x283.jpg");
+    position: absolute;
+    top:500px;
+    height:200px;
+    width: 1288px;
+    background-color: #348f9b;
+    
+}
+

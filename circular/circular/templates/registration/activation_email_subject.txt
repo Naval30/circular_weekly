@@ -1,0 +1,1 @@
+Activate your WeeklyCircular.org account - you have {{ expiration_days }} days!

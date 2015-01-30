@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Weekly Circular - {% user.username %} Profile page{% endblock %}
+{% block bootstrap %}
+  <link href="{{ BASE_DIR }}/static/css/signin.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class ="container">
+  <h1>{% trans 'Profile' %}</h1>
+  <h4>
+    {% trans 'Hello' %}
+    {% if user.first_name !='' %}
+        {{ user.first_name }}
+    {% else %}
+        {{ user.username }}
+    {% endif %}
+  </h4>
+
+
+</div>
+{% endblock %}

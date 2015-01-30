@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+        {% block title %}Recipes{% endblock %}
+        {% block bootstrap %}
+        <link href="{{ BASE_DIR }}/static/css/recipeform.css" rel="stylesheet">
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        {% endblock %}
+
+{% block content %}
+<div class ="container">
+  <h1>User Preferences</h1>
+    <form method="POST" action="{% url 'recipe' %}" id='userChoice' enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                     <label for="id_q">Recipe Name :</label>
+                </td>
+                <td>
+                    {{form.q}}
+                </td>
+                <td>
+                    &emsp;
+                </td>
+                <td>
+                    <label for="id_AllowedIngredients">Allowed Ingridients :</label>
+                </td>
+                <td>
+                    {{form.AllowedIngredients}}
+                </td>
+            </tr
+            <tr>
+                <td>
+                    <label for="id_ExcludedIngredients">Exluded Ingredients :</label>
+                </td>
+                <td>
+                    {{form.ExcludedIngredients}}
+                </td>
+                <td>
+                    &emsp;
+                </td>
+                <td>
+                    <label for="id_cuisine">Cuisine :</label>
+                </td>
+                <td>
+                    {{form.cuisine}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <label for="id_course">Course :</label>
+                </td>
+                <td>
+                    {{form.course}}
+                </td>
+                <td>
+                    &emsp;
+                </td>
+                <td>
+                    <label for="id_Allergy">Allergy :</label>
+                </td>
+                <td>
+                    {{form.Allergy}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <label for="id_Holiday">Holiday :</label>
+                </td>
+                <td>
+                    {{form.Holiday}}
+                </td>
+                <td>
+                    &emsp;
+                </td>
+                <td>
+                    <label for="id_Diet">Diet :</label>
+                </td>
+                <td>
+                    {{form.Diet}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="id_flavors">Flavors :</label>
+                </td>
+                <td>
+                    {{form.flavors}}
+                </td>
+            </tr>
+            <!--<tr>
+                <td>
+                  <input type="text" id="fval" value="max and min values of the flavor"/>
+                </td>
+                <td>
+                  <div id="slider-range"></div>
+                </td>
+            </tr>-->
+        </table>
+        <br>
+        <table>
+            <tr>
+              <td>
+                <input class="btn btn-primary" type="submit" value="Get Recipes" id='getRecipe'/>
+              </td>
+              <td>
+                &emsp;
+              </td>
+              <td>
+                <input class="btn btn-primary" type="button" value="Clear" id="clear"/>
+              </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <div id="result_1" class="result"></div>
+    <br>
+    <div id="result_2" class="result"></div>
+    <br>
+</div>
+{% endblock %}

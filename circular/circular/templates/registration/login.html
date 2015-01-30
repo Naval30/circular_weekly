@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Log in{% endblock %}
+
+{% block bootstrap %}
+  <link href="{{ BASE_DIR }}/static/css/signin.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container">
+<h1>Log in</h1>
+
+{% if form.errors %}
+<p class="errors">Please correct the errors below:</p>
+{% endif %}
+
+
+<form class="form-sigin" role="form" method="post" action="?next={{ next|default:"/" }}">{% csrf_token %}
+  <dl>
+  <dt>
+    <label class="form-signin-heading" for="id_username">Username:</label>
+    {% if form.username.errors %} 
+      <span class="error">{{ form.username.errors|join:", " }}</span>
+    {% endif %}
+  </dt>
+  <dd>{{ form.username }}</dd>
+  <dt>
+    <label class="form-signin-heading" for="id_password">Password:</label>
+    {% if form.password.errors %} 
+       <span class="error">{{ form.password.errors|join:", " }}</span>
+    {% endif %}
+  </dt>
+  <dd>{{ form.password }}</dd>
+  <dt>
+    <input class="btn btn-primary" type="submit" value="Log in" />
+    &nbsp;<a href="{% url 'auth_password_reset' %}"> Forgot Password?</a>
+  </dt>
+  </dl>
+</form>
+{% block content-related %}
+   <p>If you don't have an account, you can <a href="/accounts/register/">sign up</a> for one.
+{% endblock %}
+</div>
+{% endblock %}

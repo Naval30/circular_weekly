@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+        {% block title %}Deals{% endblock %}
+        {% block bootstrap %}
+        <link href="{{ BASE_DIR }}/static/css/deals.css" rel="stylesheet">
+        {% endblock %}
+
+{% block content %}
+  <div class="container"> 
+    <br>
+    <div class="sidebar">
+        {% for s in stores %}
+          <button type="button" class="btn btn-default btn-lg" id= {{ s }}>        
+          <span class="glyphicon glyphicon-star"></span> {{ s }}  
+          </button>
+        {% endfor %}
+    </div>
+    
+    {% for s in stores %}
+      <div class="main-content" >
+        {% for l in locations %}
+          {% if s.id == l.store.id %}
+            <div class='location' id={{ s }} >
+              <p style="display: none;">
+              {{l.street}}<br>
+              {{l.city}}, {{l.state}} {{l.zip_code}}
+              </p>
+            </div>
+            <div class = "product-content" id={{s}} >
+                <i></i>
+                {% for p in products %}
+                  {% for i in p.store_location.iterator %}
+                    {% if i.id == l.id %}
+                      <li  style="display: none;">{{p.product_name}}</li>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

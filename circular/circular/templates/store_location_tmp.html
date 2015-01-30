@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+        {% block title %}Stores Location for {{ store_name }}{% endblock %}
+        {% block bootstrap %}
+        <link href="{{ BASE_DIR }}/static/css/deals.css" rel="stylesheet">
+        {% endblock %}
+
+{% block content %}
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+    {% for location in locations %}
+        <div class="row">
+        {% for l in location %}
+          <div class="col-lg-4">
+          <h2>{{ l }}</h2>
+	  <p>Click below to check all discounts available at this location</p>
+	  <p><a class="btn btn-default" href="{{ l.id }}" role="button">View all Discounts &raquo;</a></p>
+	  </div><!-- /.col-lg-4 -->
+	{% endfor %}
+	</div><!-- /.row -->
+    {% endfor %} 
+  </div>
+{% endblock %}

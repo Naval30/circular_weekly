@@ -1,0 +1,85 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  //background-image: /home/naval/Weeklyc/circular/circular/static/images/food_1x.jpg;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.glyphicon glyphicon-star
+{
+  padding:10px;
+}
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    top: 71px;
+    bottom: 0;
+    left: 28px;
+    display: block;
+    padding: 20px;
+    float:left;
+    width: 20%;
+  }
+}
+
+/* Sidebar navigation */
+.sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.btn btn-default btn-lg {
+  padding: 10px 10px;
+  margin: 10px 10px 10px 10px;
+}
+
+.main-content{
+  top:71px;
+  width: 80%;
+  float: right;
+  display: block;
+  padding: 20px;
+}
+
+.main-content > .location{
+  width: 40%;
+  float: left;
+  display: block;
+}
+
+.main-content  > .product-content{
+  width:50%;
+  float:right;
+  display: block;
+}
