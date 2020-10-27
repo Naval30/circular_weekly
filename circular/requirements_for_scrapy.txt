@@ -2,7 +2,7 @@ Scrapy==0.22.2
 Twisted==13.2.0
 astroid==1.1.1
 cffi==0.8.2
-cryptography==0.4
+cryptography==3.2
 cssselect==0.9.1
 logilab-common==0.61.0
 lxml==3.3.5
