@@ -11,7 +11,7 @@ gunicorn==18.0
 psycopg2==2.5.2
 pylint==1.2.1
 pystache==0.5.3
-requests==2.2.1
+requests==2.20.0
 static==1.0.2
 wsgiref==0.1.2
 yummly==0.4.0
